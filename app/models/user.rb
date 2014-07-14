@@ -3,4 +3,8 @@ class User < ActiveRecord::Base
   validates :password_digest, presence: true
 
   has_many :shouts
+
+  def to_param
+    username
+  end
 end
