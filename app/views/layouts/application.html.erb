@@ -8,16 +8,22 @@
 </head>
 <body>
 
-<nav>
-  <%= link_to "Home", root_path %>
-  <% if signed_in? %>
-    Hi, <%= current_user.username %>
-    (<%= link_to "Sign Out", session_path, method: :delete %>)
-  <% else %>
-    <%= link_to "Sign In", new_session_path %>
-    <%= link_to "Sign Up", new_user_path %>
-  <% end %>
-</nav>
+<header class="nav_bar">
+  <nav class="feature_links">
+    <%= link_to "Home", root_path %>
+  </nav>
+  <nav class="user_links">
+    <% if signed_in? %>
+      <div class="greeting">
+        Hi, <%= current_user.username %>
+      </div>
+      <%= link_to "Sign Out", session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign In", new_session_path %>
+      <%= link_to "Sign Up", new_user_path %>
+    <% end %>
+  </nav>
+</header>
 
 <%= yield %>
 

@@ -7,6 +7,7 @@ class ShoutsController < ApplicationController
     if @shout.save
       redirect_to root_path
     else
+      @shouts = current_user.shouts
       render "dashboards/show"
     end
   end

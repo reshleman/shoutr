@@ -1,0 +1,10 @@
+<%= form_for shout do |form| %>
+  <%= render "errors", object: shout %>
+
+  <div>
+    <%= form.text_field :content %>
+  </div>
+  <div>
+    <%= form.submit "Shout!" %>
+  </div>
+<% end %>

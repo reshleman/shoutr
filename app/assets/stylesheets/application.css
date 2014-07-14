@@ -13,3 +13,94 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: sans-serif;
+  font-size: 1.3em;
+  margin: 1em;
+}
+
+h1 {
+  float: left;
+}
+
+/* Header and Nav Styles */
+
+header.nav_bar {
+  background: #DDD;
+  height: 1em;
+  padding: .7em;
+  clear: both;
+}
+
+.nav_bar nav {
+}
+
+nav.feature_links {
+  float: left;
+}
+
+nav.user_links {
+  float: right;
+}
+
+nav.user_links .greeting {
+  float: left;
+  padding-right: 1em;
+}
+
+/* Shout Styles */
+
+section#shouts_list {
+  clear: both
+}
+
+.shout {
+  border: 1px solid;
+  margin: .5em;
+  padding: .8em;
+}
+
+.shout_content {
+  margin-bottom: .3em;
+}
+
+.shout_timestamp {
+  color: #888;
+  font-size: .7em;
+  font-style: italic;
+}
+
+/* Shout Form */
+
+section#new_shout {
+  border: 1px solid;
+  background-color: #CCC;
+  margin: .5em;
+  padding: .3em;
+  float: right;
+}
+
+section#new_shout h2 {
+  font-size: .8em;
+}
+
+section#new_shout form div {
+  display: inline;
+}
+
+form .errors{
+  font-size: .8em;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: inline;
+}
+
+/* Login/Logout */
+
+section#sign_in, section#sign_up {
+  clear: both;
+}
