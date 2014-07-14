@@ -35,7 +35,7 @@ h2 {
 }
 
 #main_content {
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
 }
 
@@ -101,6 +101,15 @@ section#new_shout {
 
 section#new_shout h2 {
   font-size: .8em;
+  margin: .2em;
+  padding-top: .3em;
+  padding-right: .3em;
+  float: left;
+}
+
+section#new_shout form {
+  float: right; 
+  margin: .2em;
 }
 
 section#new_shout form div {
