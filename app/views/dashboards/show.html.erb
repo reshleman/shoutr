@@ -1,1 +1,16 @@
 <h1>Dashboard</h1>
+
+<h2>New Shout</h2>
+<%= form_for [@shout] do |form| %>
+  <div>
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+  <div>
+    <%= form.submit "Shout!" %>
+  </div>
+<% end %>
+
+<h2>My Shouts</h2>
+
+<%= render @shouts %>
