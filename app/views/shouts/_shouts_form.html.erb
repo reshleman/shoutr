@@ -2,7 +2,8 @@
   <%= render "errors", object: shout %>
 
   <div>
-    <%= form.text_field :content %>
+    <%= form.label :content %>
+    <%= form.text_field :content, placeholder: "Say it here!" %>
   </div>
   <div>
     <%= form.submit "Shout!" %>

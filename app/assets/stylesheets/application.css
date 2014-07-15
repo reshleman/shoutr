@@ -199,12 +199,13 @@ input[type="submit"]:hover {
 }
 
 .shout-timestamp {
+  color: #333;
   margin-top: 5px;
   font-size: .8em;
   font-style: italic;
 }
 
-/* Etc. */
+/* Misc. Form Styles */
 
 #follow-button {
   float: right;
@@ -212,4 +213,8 @@ input[type="submit"]:hover {
 
 #follow-button form input {
   margin-top: 2px;
+}
+
+.new-shout-form label {
+  display: none;
 }
