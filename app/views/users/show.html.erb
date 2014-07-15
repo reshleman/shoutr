@@ -4,7 +4,7 @@
   </header>
 
   <div class="users">
-    <%= render @user.followed_users %>
+    <%= render(@user.followed_users) || "Not following anybody." %>
   </div>
 
   <header>
@@ -12,7 +12,7 @@
   </header>
 
   <div class="users">
-    <%= render @user.followers %>
+    <%= render(@user.followers) || "No followers." %>
   </div>
 </section>
 
