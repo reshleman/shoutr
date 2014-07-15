@@ -2,3 +2,8 @@
   <h2><%= @user.username %>'s Shouts</h2>
   <%= render @shouts %>
 </section>
+
+<section id="followed_users">
+  <h2>Following</h2>
+  <%= render @user.followed_users %>
+</section>
