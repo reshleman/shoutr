@@ -6,18 +6,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="<%= [controller_name, action_name].join("-") %>">
 
-<header class="nav_bar">
-  <nav class="feature_links">
+<header class="top-bar">
+  <nav class="feature-links">
     <%= link_to "Home", root_path %>
   </nav>
-  <nav class="user_links">
+  <nav class="user-links">
     <% if signed_in? %>
-      <div class="greeting">
-        Hi, <%= current_user.username %>
-      </div>
-      <%= link_to "Sign Out", session_path, method: :delete %>
+      Hi, <%= current_user.username %>
+      (<%= link_to "Sign Out", session_path, method: :delete %>)
     <% else %>
       <%= link_to "Sign In", new_session_path %>
       <%= link_to "Sign Up", new_user_path %>
@@ -25,7 +23,7 @@
   </nav>
 </header>
 
-<section id="main_content">
+<section id="main-content">
   <%= yield %>
 </section>
 

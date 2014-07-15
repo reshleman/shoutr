@@ -1,9 +1,16 @@
-<h1>Shoutr</h1>
+<div id="home">
+  <header>
+    <h1>Shoutr</h1>
+    <p>Tagline</p>
+  </header>
 
-<section id="sign_in">
-  <%= render "sign_in_form" %>
-</section>
+  <div class="home-forms">
+    <div class="home-form">
+      <%= render "sign_in_form" %>
+    </div>
 
-<section id="sign_up">
-  <%= render "sign_up_form", user: @user %>
-</section>
+    <div class="home-form">
+      <%= render "sign_up_form", user: @user %>
+    </div>
+  </div>
+</div>

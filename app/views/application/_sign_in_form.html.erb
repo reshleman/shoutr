@@ -1,12 +1,12 @@
-<h2>Sign In</h2>
+<h1>Sign In</h1>
 <%= form_for :session, url: session_path do |form| %>
   <div>
     <%= form.label :username %>
-    <%= form.text_field :username %>
+    <%= form.text_field :username, placeholder: "Username" %>
   </div>
   <div>
     <%= form.label :password %>
-    <%= form.password_field :password %>
+    <%= form.password_field :password, placeholder: "Password" %>
   </div>
   <div>
     <%= form.submit "Sign in" %>

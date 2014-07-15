@@ -1,9 +1,13 @@
-<section id="new_shout">
-  <h2>New Shout:</h2>
+<section class="sidebar">
   <%= render "shouts/shouts_form", shout: @shout %>
 </section>
 
-<section id="shouts_list">
-  <h2>My Shouts</h2>
-  <%= render @shouts %>
+<section class="timeline">
+  <header>
+    <h1>My Shouts</h1>
+  </header>
+
+  <div class="shouts">
+    <%= render @shouts %>
+  </div>
 </section>

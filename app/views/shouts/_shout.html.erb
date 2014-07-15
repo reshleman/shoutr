@@ -1,8 +1,8 @@
 <div class="shout">
-  <div class="shout_content">
+  <div class="shout-content">
     <%= shout.content %>
   </div>
-  <div class="shout_timestamp">
+  <div class="shout-timestamp">
     Shouted by <%= link_to shout.user.username, shout.user %> <%= time_ago_in_words(shout.created_at) %> ago
   </div>
 </div>

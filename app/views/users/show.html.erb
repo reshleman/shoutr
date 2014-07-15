@@ -1,9 +1,19 @@
-<section id="shouts_list">
-  <h2><%= @user.username %>'s Shouts</h2>
-  <%= render @shouts %>
+<section class="sidebar">
+  <header>
+    <h1>Following</h1>
+  </header>
+
+  <div class="users">
+    <%= render @user.followed_users %>
+  </div>
 </section>
 
-<section id="followed_users">
-  <h2>Following</h2>
-  <%= render @user.followed_users %>
+<section class="timeline">
+  <header>
+    <h1><%= @user.username %>'s Shouts</h1>
+  </header>
+
+  <div class="shouts">
+    <%= render @shouts %>
+  </div>
 </section>
