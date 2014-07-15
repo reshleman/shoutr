@@ -128,7 +128,7 @@ input[type="submit"] {
   border: 1px solid #000;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
   font-size: .7em;
 }
 
