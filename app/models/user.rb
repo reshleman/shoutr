@@ -10,6 +10,12 @@ class User < ActiveRecord::Base
 
   has_many :followed_users, through: :followed_user_relationships
 
+  has_many :follower_relationships,
+            class_name: "FollowingRelationship",
+            foreign_key: :followed_user_id
+
+  has_many :followers, through: :follower_relationships
+
   def to_param
     username
   end
