@@ -4,6 +4,7 @@ gem 'rails', '4.1.3'
 
 gem 'monban', '~> 0.1.1'
 gem 'monban-generators', '~> 0.0.3'
+gem 'paperclip', '~> 4.2.0'
 
 gem 'pg'
 
