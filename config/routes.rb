@@ -14,5 +14,5 @@ Rails.application.routes.draw do
       delete "follow" => "following_relationships#destroy"
     end
   end
-  resources :shouts, only: [:create]
+  resources :text_shouts, only: [:create]
 end
