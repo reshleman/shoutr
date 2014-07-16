@@ -16,6 +16,10 @@ class User < ActiveRecord::Base
 
   has_many :followers, through: :follower_relationships
 
+  def timeline
+    Shout.where(user_id: [id] + followed_user_ids).order(created_at: :desc)
+  end
+
   def follow(user)
     followed_users << user
   end
