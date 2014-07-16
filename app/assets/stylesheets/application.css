@@ -159,10 +159,10 @@ input[type="submit"]:hover {
   background-color: rgba(255, 255, 255, 0.75);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.62);
   border-radius: 5px;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
-.sidebar {
+aside {
   width: 220px;
   float: left;
 }
@@ -198,6 +198,10 @@ input[type="submit"]:hover {
   border-bottom: 1px solid #D8D8D8;
 }
 
+.shout img {
+  width: 250px;
+}
+
 .shout-timestamp {
   color: #333;
   margin-top: 5px;
@@ -215,6 +219,6 @@ input[type="submit"]:hover {
   margin-top: 2px;
 }
 
-.new-shout-form label {
+.shout-form label {
   display: none;
 }

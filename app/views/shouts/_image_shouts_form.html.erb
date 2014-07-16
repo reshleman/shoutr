@@ -1,9 +1,15 @@
-<%= form_for image_shout do |form| %>
-  <div>
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
-  <div>
-    <%= form.submit "Shout!" %>
-  </div>
-<% end %>
+<section class="sidebar shout-form image-shout-form">
+  <header>
+    <h1>Shout an Image</h1>
+  </header>
+
+  <%= form_for image_shout do |form| %>
+    <div>
+      <%= form.label :image %>
+      <%= form.file_field :image %>
+    </div>
+    <div>
+      <%= form.submit "Shout!" %>
+    </div>
+  <% end %>
+</section>

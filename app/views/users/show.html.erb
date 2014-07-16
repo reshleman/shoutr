@@ -1,24 +1,12 @@
-<section class="sidebar">
-  <header>
-    <h1>Following</h1>
-  </header>
-
-  <div class="users">
-    <%= render(@user.followed_users) || "Not following anybody." %>
-  </div>
-
-  <header>
-    <h1>Followers</h1>
-  </header>
-
-  <div class="users">
-    <%= render(@user.followers) || "No followers." %>
-  </div>
-</section>
+<aside>
+  <%= render "followers", user: @user %>
+  <%= render "followed_users", user: @user %>
+</aside>
 
 <section class="timeline">
   <header>
     <h1><%= @user.username %>'s Shouts</h1>
+
     <% unless current_user == @user %>
       <div id="follow-button">
         <% if current_user.following?(@user) %>

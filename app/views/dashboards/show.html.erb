@@ -1,9 +1,10 @@
-<section class="sidebar">
-  <div class="new-shout-form">
-    <%= render "shouts/text_shouts_form", shout: @text_shout %>
-    <%= render "shouts/image_shouts_form", image_shout: @image_shout %>
-  </div>
-</section>
+<aside>
+  <%= render "shouts/text_shouts_form", shout: @text_shout %>
+  <%= render "shouts/image_shouts_form", image_shout: @image_shout %>
+
+  <%= render "followers", user: current_user %>
+  <%= render "followed_users", user: current_user %>
+</aside>
 
 <section class="timeline">
   <header>

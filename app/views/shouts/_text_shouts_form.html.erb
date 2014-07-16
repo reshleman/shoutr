@@ -1,11 +1,17 @@
-<%= form_for shout do |form| %>
-  <%= render "errors", object: shout %>
+<section class="sidebar shout-form text-shout-form">
+  <header>
+    <h1>New Shout</h1>
+  </header>
 
-  <div>
-    <%= form.label :body %>
-    <%= form.text_field :body, placeholder: "Say it here!" %>
-  </div>
-  <div>
-    <%= form.submit "Shout!" %>
-  </div>
-<% end %>
+  <%= form_for shout do |form| %>
+    <%= render "errors", object: shout %>
+
+    <div>
+      <%= form.label :body %>
+      <%= form.text_field :body, placeholder: "Say it here!" %>
+    </div>
+    <div>
+      <%= form.submit "Shout!" %>
+    </div>
+  <% end %>
+</section>
