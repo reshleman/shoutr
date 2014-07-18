@@ -47,7 +47,7 @@ a:hover {
   color: #000;
 }
 
-input[type="text"], input[type="password"], input[type="email"] {
+input[type="text"], input[type="password"], input[type="email"], input[type="search"] {
   width: calc(100% - 25px);
   margin: 5px 5px;
   padding: 5px;
@@ -95,7 +95,7 @@ input[type="submit"]:hover {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 }
 
-#homes-show #main-content, #dashboards-show #main-content, #users-show #main-content {
+#homes-show #main-content, #dashboards-show #main-content, #users-show #main-content, #search_results-show #main-content {
   background-color: transparent;
   box-shadow: none;
 }
@@ -226,6 +226,6 @@ aside {
   margin-top: 2px;
 }
 
-.shout-form label {
+.shout-form label, .search-form label {
   display: none;
 }

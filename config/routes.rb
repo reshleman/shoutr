@@ -10,11 +10,13 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create, :show], id: /[^\/]+/ do
     member do
-      post "follow" => "following_relationships#create"
-      delete "follow" => "following_relationships#destroy"
+      post "follow", to: "following_relationships#create"
+      delete "follow", to: "following_relationships#destroy"
     end
   end
 
   resources :text_shouts, only: [:create]
   resources :image_shouts, only: [:create]
+
+  get :search, to: "search_results#show"
 end

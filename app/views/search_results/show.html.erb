@@ -1,0 +1,15 @@
+<aside>
+  <%= render "search_form" %>
+</aside>
+
+<section class="timeline">
+  <header>
+    <h1>Search Results for '<%= @query %>'</h1>
+  </header>
+
+  <div class="shouts">
+    <%= render @shouts %>
+  </div>
+
+  <%= paginate @shouts %>
+</section>

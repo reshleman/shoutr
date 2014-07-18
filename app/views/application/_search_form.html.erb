@@ -1,0 +1,15 @@
+<section class="sidebar search">
+  <header>
+    <h1>Search</h1>
+  </header>
+
+  <%= form_tag(search_path, method: :get, class: "search-form") do %>
+    <div>
+      <%= label_tag :query %>
+      <%= search_field_tag :query %>
+    </div>
+    <div>
+      <%= submit_tag "Search" %>
+    </div>
+  <% end %>
+</section>
