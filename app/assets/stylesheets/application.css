@@ -209,6 +209,13 @@ aside {
   font-style: italic;
 }
 
+/* Pagination */
+
+.pagination {
+  padding: 10px;
+  text-align: center;
+}
+
 /* Misc. Form Styles */
 
 #follow-button {
