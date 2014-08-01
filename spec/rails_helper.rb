@@ -45,4 +45,10 @@ RSpec.configure do |config|
 
   # Factory Girl
   config.include FactoryGirl::Syntax::Methods
+
+  # Monban
+  config.include Monban::Test::Helpers, type: :feature
+  config.after :each do
+    Monban.test_reset!
+  end
 end
