@@ -16,3 +16,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'spring',        group: :development
 gem 'bullet',        group: :development
+
+gem 'rspec-rails', group: [:development, :test]
+gem 'capybara', group: [:development, :test]
+gem 'database_cleaner', group: [:development, :test]
+gem 'factory_girl_rails', group: [:development, :test]
