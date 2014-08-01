@@ -19,7 +19,8 @@ class User < ActiveRecord::Base
   def timeline
     Shout.
       where(user_id: self_and_followed_users_ids).
-      order(created_at: :desc)
+      order(created_at: :desc).
+      includes(:content, :user)
   end
 
   def follow(user)

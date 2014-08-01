@@ -18,8 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(username: params[:id])
-    @shouts = @user.shouts.page(params[:page])
-
+    @shouts = @user.shouts.includes(:content).page(params[:page])
   end
 
   private
