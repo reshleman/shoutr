@@ -1,5 +1,5 @@
 <h1>Sign In</h1>
-<%= form_for :session, url: session_path do |form| %>
+<%= form_for :session, url: session_path, html: { id: "session" } do |form| %>
   <div>
     <%= form.label :username %>
     <%= form.text_field :username, placeholder: "Username" %>
