@@ -17,29 +17,30 @@ feature "Signing up" do
 end
 
 feature "Signing in" do
-  scenario "with correct credentials" do
-    user = create(:user)
+  before(:each) do
+    @user = create(:user)
+  end
 
+  scenario "with correct credentials" do
     visit root_path
-    within "#session" do
-      fill_in "Username", with: user.username
-      fill_in "Password", with: user.password_digest
-    end
-    click_button "Sign in"
+    sign_in_as(@user.username, @user.password_digest)
 
     expect(page).to have_content "Timeline"
   end
 
   scenario "with incorrect credentials" do
-    user = create(:user)
-
     visit root_path
-    within "#session" do
-      fill_in "Username", with: user.username
-      fill_in "Password", with: "incorrect_password"
-    end
-    click_button "Sign in"
+    sign_in_as(@user.username, "incorrect_password")
 
     expect(page).to have_selector "#session"
+  end
+
+  def sign_in_as(username, password)
+    within "#session" do
+      fill_in "Username", with: username
+      fill_in "Password", with: password
+    end
+
+    click_button "Sign in"
   end
 end
